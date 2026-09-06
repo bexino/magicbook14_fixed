@@ -34,6 +34,14 @@
 
 ---
 
+## 常见问题
+
+- 脚本运行后，触控板仍然无法使用，但GNOME中存在触控板设置？
+  
+   - 按下 Fn+F3 启用触控板后再试。
+
+---
+
 ## 鸣谢
 
 https://gitee.com/syhun/magicbook14_2026_358h_fedora_linux_touchpad_fixed
