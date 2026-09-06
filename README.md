@@ -1,4 +1,4 @@
-# HONOR MagicBook 14 2026 (BCC-N, M1070) — Fix
+# magicbook14_fixed
 
 修复 HONOR MagicBook 14 2026 (BCC-N, M1070) 在 Linux 系统上的：触摸板、键盘、指纹识别问题。
 
