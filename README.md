@@ -8,15 +8,15 @@
 
 - RPM 系，  
   
-  > (e.g. Fedora Workstation, RHEL, etc.)  
+  > e.g. Fedora Workstation, RHEL, etc.  
   
 - Fedora Atomic，  
 
-  > (e.g. SliverBlue, etc.)
+  > e.g. SliverBlue, etc.
   
 - Debian 系。
   
-  > (e.g. Ubuntu, Mint, etc.)
+  > e.g. Ubuntu, Mint, etc.
   >   
   > **注意**：Debian 系暂未支持指纹修复。  
 
