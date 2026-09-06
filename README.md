@@ -30,6 +30,8 @@
 (set -e; sudo -v; if [ -e /run/ostree-booted ] && command -v rpm-ostree >/dev/null; then sudo rpm-ostree install --apply-live --allow-inactive git cpio; elif command -v dnf >/dev/null; then sudo dnf install -y git cpio; elif command -v apt-get >/dev/null; then sudo apt-get update && sudo apt-get install -y git cpio; else echo "不支持的发行版：需要 Fedora/Fedora Atomic/Debian/Ubuntu/Mint" >&2; exit 1; fi; tmp="$(mktemp -d -t magicbook14_fixed.XXXXXX)"; trap 'rm -rf -- "$tmp"' EXIT; trap 'exit 130' INT TERM HUP; git clone --depth 1 https://github.com/bexino/magicbook14_fixed.git "$tmp/repo"; cd "$tmp/repo"; sudo bash run.sh)
 ```
 
+> **注意**：若使用脚本菜单重启，可能无法及时自动删除临时文件，请前往系统临时目录 `/tmp` 手动清除。
+
 ---
 
 ## 鸣谢
