@@ -1,3 +1,9 @@
+[![简体中文](https://img.shields.io/badge/简体中文-zh__cn-red)](#简体中文)
+[![QuickStart](https://img.shields.io/badge/Quick-Start-orange)](#quick-start)
+[![Commit Activity](https://img.shields.io/github/commit-activity/t/bexino/magicbook14_fixed?color=green)](https://github.com/bexino/magicbook14_fixed/commits/main/)
+[![License](https://img.shields.io/github/license/bexino/magicbook14_fixed?color=blue)](https://github.com/bexino/magicbook14_fixed/blob/main/LICENSE)
+[![MadeWith♥](https://img.shields.io/badge/@bexino-Made_With_♥-purple)](https://github.com/bexino)
+
 # magicbook14_fixed
 
 Fixes touchpad, keyboard, and fingerprint recognition issues on the HONOR MagicBook 14 2026 (BCC-N, M1070) under Linux.
