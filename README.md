@@ -2,25 +2,14 @@
 
 Fixes touchpad, keyboard, and fingerprint recognition issues on the HONOR MagicBook 14 2026 (BCC-N, M1070) under Linux.
 
----
-
 ## Applicable to
 
-- RPM-based systems,
 
-  > e.g. Fedora Workstation, RHEL, etc.
-
-- Fedora Atomic,
-
-  > e.g. SilverBlue, etc.
-
-- Debian-based systems.
-
-  > e.g. Ubuntu, Mint, etc.
-  >
-  > **Note**: Fingerprint fixes are not yet supported on Debian-based systems.
-
----
+| System        | e.g.                           | Notes                                                        |
+| ------------- | ------------------------------ | ------------------------------------------------------------ |
+| RPM-based     | Fedora Workstation, RHEL, etc. |                                                              |
+| Fedora Atomic | e.g. SilverBlue, etc.          |                                                              |
+| Debian-based  | e.g. Ubuntu, Mint, etc.        | Fingerprint fix is not yet supported;  <br />PRs are welcome. |
 
 ## Quick Start
 
@@ -30,48 +19,45 @@ Run directly in the terminal:
 (set -e; sudo -v; if [ -e /run/ostree-booted ] && command -v rpm-ostree >/dev/null; then sudo rpm-ostree install --apply-live --allow-inactive git cpio; elif command -v dnf >/dev/null; then sudo dnf install -y git cpio; elif command -v apt-get >/dev/null; then sudo apt-get update && sudo apt-get install -y git cpio; else echo "Unsupported distribution: Fedora/Fedora Atomic/Debian/Ubuntu/Mint required" >&2; exit 1; fi; tmp="$(mktemp -d -t magicbook14_fixed.XXXXXX)"; trap 'rm -rf -- "$tmp"' EXIT; trap 'exit 130' INT TERM HUP; git clone --depth 1 https://github.com/bexino/magicbook14_fixed.git "$tmp/repo"; cd "$tmp/repo"; sudo bash run.sh)
 ```
 
-> **Note**: If you restart via the script menu, the temporary files may not be automatically deleted in time. Please go to the system temporary directory `/tmp` to remove them manually.
+> [!NOTE]
+>
+> If you restart using the script menu, the temporary files may not be automatically deleted in time.  
+> Please go to the system temporary directory `/tmp` and remove them manually.
 
 ---
 
 ## FAQ
 
-- After running the script, the touchpad still doesn't work, but touchpad settings exist in GNOME?
-
-   - Press Fn+F3 to enable the touchpad and try again.
+Q: After running the script, the touchpad still does not work, but touchpad settings are present in GNOME?  
+A: Press Fn+F3 to enable the touchpad, then try again.
 
 ---
 
-## Credits
+## Acknowledgements
 
 https://gitee.com/syhun/magicbook14_2026_358h_fedora_linux_touchpad_fixed
 
+## License
+
+Apache-2.0 license
+
+
+
 ---
 
 
-# magicbook14 驱动修复
+# 简体中文
 
 修复 HONOR MagicBook 14 2026 (BCC-N, M1070) 在 Linux 系统上的：触摸板、键盘、指纹识别问题。
 
----
-
 ## 适用于
 
-- RPM 系，  
-  
-  > e.g. Fedora Workstation, RHEL, etc.  
-  
-- Fedora Atomic，  
 
-  > e.g. SliverBlue, etc.
-  
-- Debian 系。
-  
-  > e.g. Ubuntu, Mint, etc.
-  >   
-  > **注意**：Debian 系暂未支持指纹修复。  
-
----
+| 系统          | e.g.                           | 备注                        |
+| ------------- | ------------------------------ | --------------------------- |
+| RPM 系        | Fedora Workstation, RHEL, etc. |                             |
+| Fedora Atomic | e.g. SliverBlue, etc.          |                             |
+| Debian 系     | e.g. Ubuntu, Mint, etc.        | 暂未支持指纹修复，  <br />欢迎PR。 |
 
 ## 快速开始
 
@@ -81,18 +67,24 @@ https://gitee.com/syhun/magicbook14_2026_358h_fedora_linux_touchpad_fixed
 (set -e; sudo -v; if [ -e /run/ostree-booted ] && command -v rpm-ostree >/dev/null; then sudo rpm-ostree install --apply-live --allow-inactive git cpio; elif command -v dnf >/dev/null; then sudo dnf install -y git cpio; elif command -v apt-get >/dev/null; then sudo apt-get update && sudo apt-get install -y git cpio; else echo "不支持的发行版：需要 Fedora/Fedora Atomic/Debian/Ubuntu/Mint" >&2; exit 1; fi; tmp="$(mktemp -d -t magicbook14_fixed.XXXXXX)"; trap 'rm -rf -- "$tmp"' EXIT; trap 'exit 130' INT TERM HUP; git clone --depth 1 https://github.com/bexino/magicbook14_fixed.git "$tmp/repo"; cd "$tmp/repo"; sudo bash run.sh)
 ```
 
-> **注意**：若使用脚本菜单重启，可能无法及时自动删除临时文件，请前往系统临时目录 `/tmp` 手动清除。
+> [!NOTE]
+>
+> 若使用脚本菜单重启，可能无法及时自动删除临时文件。  
+> 请前往系统临时目录 `/tmp` 手动清除。
 
 ---
 
-## 常见问题
+## FAQ
 
-- 脚本运行后，触控板仍然无法使用，但GNOME中存在触控板设置？
-  
-   - 按下 Fn+F3 启用触控板后再试。
+Q：脚本运行后，触控板仍然无法使用，但GNOME中存在触控板设置？  
+A：按下 Fn+F3 启用触控板后再试。
 
 ---
 
 ## 鸣谢
 
 https://gitee.com/syhun/magicbook14_2026_358h_fedora_linux_touchpad_fixed
+
+## 许可证
+
+Apache-2.0 license
